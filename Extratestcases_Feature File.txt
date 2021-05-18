@@ -1,0 +1,248 @@
+
+	@mytag
+Scenario: When the seller enters Profile description it should be added successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Description edit icon
+	When I enter Description
+	And I click the Save button
+	Then the description details should be added successfully
+
+
+
+	@mytag
+Scenario: When the seller enters the Language and do not select any Language level and clicks on Add button it should ask the seller to enter Language and Language level
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Add New button
+	When I enter Language and do not select any Language level
+	And I click the Add button
+	Then it should ask me to enter Language and Lanaguage level and no details should be added
+
+
+	@mytag
+Scenario: When the seller leaves the Language blank and select Language level and clicks on Add button it should ask the seller to enter Language and Language level
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Add New button
+	When I leave Language blank and select any Language level
+	And I click the Add button
+	Then it should ask me to enter Language and Lanaguage level and no details should be added
+
+
+	@mytag
+Scenario: When the seller leaves the Language and Language level blank and clicks on Add button it should ask the seller to enter Language and Language level
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Add New button
+	When I leave the Language blank and do not select any Language level
+	And I click the Add button
+	Then it should ask me to enter Language and Language level and no details should be added
+
+
+	@mytag
+Scenario: When the seller clicks on Cancel button that Language detail should not be added
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Add New button
+	When I enter Language and Language level
+	And I click the Cancel button
+	Then it should not save that Language detail
+
+
+	
+
+	@mytag
+Scenario: When the seller does not update any record and clicks on update it should give a message as Language already added
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	When I click on Edit button
+	And I click on Update
+	Then that Language should not be updated
+
+
+	@mytag
+Scenario: When the seller enters details for Skills it should be added successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	And I click on Add New button
+	When I enter Skill and Skill Level
+	And I click the Add button
+	Then the Skill details should be added successfully	
+
+
+
+	@mytag
+Scenario: When the seller enters the Skill and do not select any Skill level and clicks on Add button it should ask the seller to enter Skill and Experience level
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	And I click on Add New button
+	When I enter Skill and do not select any Skill level
+	And I click the Add button
+	Then it should ask me to enter Skill and Experience level and no details should be added
+
+
+	@mytag
+Scenario: When the seller leaves the Skill blank and select Skill level and clicks on Add button it should ask the seller to enter Skill and Experience level
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	And I click on Add New button
+	When I leave Skill blank and select any Skill level
+	And I click the Add button
+	Then it should ask me to enter Skill and Experience level and no details should be added
+
+
+
+	@mytag
+Scenario: When the seller leaves the Skill and Skill level blank and clicks on Add button it should ask the seller to enter Skill and Experience level
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	And I click on Add New button	
+	When I leave the Skill blank and do not select any Skill level
+	And I click the Add button
+	Then it should ask me to enter Skill and Experience level and no details should be added
+
+	@mytag
+Scenario: When the seller click on Cancel button then that Skill detail should not be saved
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	And I click on Add New button	
+	When I enter the Skill and Skill Level
+	And I click the Cancel button
+	Then it should not save that Skill detail
+
+	@mytag
+Scenario: When the seller clicks on the Edit button that Skill detail should be updated successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	When I click on Edit button
+	And I edit the Skill
+	And I click on Update
+	Then that Skill should be updated successfully
+		
+
+	@mytag
+Scenario: When the seller clicks on the x button that skill details should be deleted successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Skills tab
+	When I click on x button
+	Then that Skill should be deleted successfully
+
+
+
+
+	
+
+	@mytag
+Scenario: When the seller enters details for Education it should be added successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Education tab
+	And I click on Add New button
+	When I enter all the Mandatory fields
+	And I click the Add button
+	Then the Education details should be added successfully
+
+
+	@mytag
+Scenario: When the mandatory fields are kept blank the seller should be asked to enter all the fields
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Education tab
+	And I click on Add New button
+	When I leave any Mandatory field blank
+	And I click the Add button
+	Then it should ask me to enter all the fields and no details should be added
+
+
+	@mytag
+Scenario: When the seller click on Cancel button then that Education detail should not be saved
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Education tab
+	And I click on Add New button	
+	When I enter all the Mandatory fields
+	And I click the Cancel button
+	Then it should not save that Education detail
+
+	@mytag
+Scenario: When the seller clicks on the Edit button that Education details should be updated successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Education tab
+	When I click on Edit button
+	And I edit any mandatory field
+	And I click on Update
+	Then that Education details should be updated successfully
+		
+
+	@mytag
+Scenario: When the seller clicks on the x button that Education details should be deleted successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Education tab
+	When I click on x button
+	Then that Education should be deleted successfully
+
+
+
+
+
+	@mytag
+Scenario: When the seller enters details for Certifications it should be added successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Certifications tab
+	And I click on Add New button
+	When I enter all the Mandatory fields
+	And I click the Add button
+	Then the Certifications details should be added successfully
+
+
+	@mytag
+Scenario: When the mandatory fields are kept blank the seller should be asked to enter all the mandatory fields
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Certifications tab
+	And I click on Add New button
+	When I leave any Mandatory field blank
+	And I click the Add button
+	Then it should ask me to enter all the fields and no details should be added
+
+
+	@mytag
+Scenario: When the seller click on Cancel button then that Certification detail should not be saved
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Certifications tab
+	And I click on Add New button	
+	When I enter all the Mandatory fields
+	And I click the Cancel button
+	Then it should not save that Certification detail
+
+
+	@mytag
+Scenario: When the seller clicks on the Edit button that Certification details should be updated successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Certifications tab
+	When I click on Edit button
+	And I edit any mandatory field
+	And I click on Update
+	Then that Certifications details should be updated successfully
+		
+
+	@mytag
+Scenario: When the seller clicks on the x button that Certification details should be deleted successfully
+	Given I am at the Profile page
+	And I validate that I am at the Profile page
+	And I click on Certifications tab
+	When I click on x button
+	Then that Certifications should be deleted successfully
