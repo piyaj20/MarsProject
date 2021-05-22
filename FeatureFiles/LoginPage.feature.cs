@@ -77,11 +77,19 @@ namespace MarsProject.FeatureFiles
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Seller is able to login successfully with his credentials")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        public virtual void SellerIsAbleToLoginSuccessfullyWithHisCredentials()
+        [NUnit.Framework.TestCaseAttribute("piyaj.20@gmail.com", "Priyanka@20", null)]
+        public virtual void SellerIsAbleToLoginSuccessfullyWithHisCredentials(string username, string password, string[] exampleTags)
         {
-            string[] tagsOfScenario = new string[] {
+            string[] @__tags = new string[] {
                     "mytag"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("username", username);
+            argumentsOfScenario.Add("password", password);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Seller is able to login successfully with his credentials", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
@@ -110,13 +118,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I click on Sign In", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
- testRunner.When("I enter valid credentials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 13
- testRunner.And("I click the login button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 14
- testRunner.Then("I should be logged in successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I login with {0} and with {1}", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

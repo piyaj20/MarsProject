@@ -24,17 +24,18 @@ namespace MarsProject
             // Open Browser and launch portal
             driver = new ChromeDriver();
 
+
             //page objects for login
             LoginPage loginObj = new LoginPage(driver);
             loginObj.LoginSteps(driver);
         }
 
         [Test]
-        public void AddLanguageTest()
+        public void AddLanguageTest(IWebDriver driver, string Language)
         {
             //page objects for ProfilePage
             ProfilePage profileObj = new ProfilePage(driver);
-            profileObj.AddLanguage(driver);
+            profileObj.AddLanguage(driver, Language);
 
         }
 
@@ -48,6 +49,7 @@ namespace MarsProject
         }
         
 
+        /*
         [Test]
         public void DeleteLanguageTest()
         {
@@ -55,8 +57,9 @@ namespace MarsProject
             ProfilePage profileObj = new ProfilePage(driver);
             profileObj.deleteLanguage(driver);
         }
-     
-        [TearDown]
+        */
+
+       [TearDown]
         public void FinalSteps()
         {
             //close driver

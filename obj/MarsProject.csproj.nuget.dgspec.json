@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Priyanka Bhosale\\Industry connect\\Internship_tasks\\Task1\\MarsProject\\MarsProject\\MarsProject\\MarsProject.csproj": {}
+    "E:\\Priyanka Bhosale\\Cloned Project\\MarsProject.csproj": {}
   },
   "projects": {
-    "E:\\Priyanka Bhosale\\Industry connect\\Internship_tasks\\Task1\\MarsProject\\MarsProject\\MarsProject\\MarsProject.csproj": {
+    "E:\\Priyanka Bhosale\\Cloned Project\\MarsProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Priyanka Bhosale\\Industry connect\\Internship_tasks\\Task1\\MarsProject\\MarsProject\\MarsProject\\MarsProject.csproj",
+        "projectUniqueName": "E:\\Priyanka Bhosale\\Cloned Project\\MarsProject.csproj",
         "projectName": "MarsProject",
-        "projectPath": "E:\\Priyanka Bhosale\\Industry connect\\Internship_tasks\\Task1\\MarsProject\\MarsProject\\MarsProject\\MarsProject.csproj",
+        "projectPath": "E:\\Priyanka Bhosale\\Cloned Project\\MarsProject.csproj",
         "packagesPath": "C:\\Users\\rohan\\.nuget\\packages\\",
-        "outputPath": "E:\\Priyanka Bhosale\\Industry connect\\Internship_tasks\\Task1\\MarsProject\\MarsProject\\MarsProject\\obj\\",
+        "outputPath": "E:\\Priyanka Bhosale\\Cloned Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[3.11.0, )"
             },
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "ExtentReports": {
               "target": "Package",
               "version": "[4.1.0, )"
@@ -80,19 +84,19 @@
             },
             "SpecFlow": {
               "target": "Package",
-              "version": "[3.8.7, )"
+              "version": "[3.8.14, )"
             },
             "SpecFlow.NUnit": {
               "target": "Package",
-              "version": "[3.8.7, )"
+              "version": "[3.8.14, )"
             },
             "SpecFlow.Tools.MsBuild.Generation": {
               "target": "Package",
-              "version": "[3.8.7, )"
+              "version": "[3.8.14, )"
             },
             "SpecRun.Runner": {
               "target": "Package",
-              "version": "[3.8.8, )"
+              "version": "[3.8.12, )"
             },
             "WebDriver.ChromeDriver.win32": {
               "target": "Package",

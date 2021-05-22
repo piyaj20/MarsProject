@@ -15,9 +15,11 @@ namespace MarsProject.Steps
     {
         private readonly IWebDriver driver;
         private LoginPage loginPage = new LoginPage();
+        
 
         public LoginPageSteps()
         {
+           
             // Open Browser      
             driver = new ChromeDriver();
 
@@ -27,17 +29,17 @@ namespace MarsProject.Steps
 
         }
 
-        [AfterScenario]
+        /*fterScenario]
         public void RunAfterEveryTest()
         {
             driver.Close();
-        }
+        }*/
 
         [Given("I am at the login page")]
         public void GiveIAmAtTheLoginPage()
         {
             //LoginPage loginPage = new LoginPage();
-            loginPage.navigateToLoginPage(driver);
+            loginPage.LoginSteps(driver);
             Console.WriteLine("I am at the login page");
         }
 
@@ -45,34 +47,18 @@ namespace MarsProject.Steps
         public void WhenIClickOnSignIn()
         {
             //LoginPage loginPage = new LoginPage();
-            loginPage.clickSignin(driver);
+            loginPage.SignIn(driver);
             Console.WriteLine("I click on Sign In");
         }
 
-        [When("I enter valid credentials")]
-        public void WhenIEnterValidCredentials()
+        [Then(@"I login with (.*) and with (.*)")]
+        public void ThenIEnterValidCredentials(string username, string password)
         {
             //LoginPage loginPage = new LoginPage();
-            loginPage.enterCredentials(driver);
-            Console.WriteLine("I enter valid credentials");
-        }
-
-        [When("I click the login button")]
-        public void WhenIClickTheLoginButton()
-        {
-            //LoginPage loginPage = new LoginPage();
-            loginPage.clickLoginButton(driver);
-            Console.WriteLine("I click the login button");
-        }
-
-        [Then("I should be logged in successfully")]
-        public void IShouldBeLoggedInSuccessfully()
-        {
-            //LoginPage loginPage = new LoginPage();
-            bool isLoggedIn = loginPage.validateLoggedInSuccessfully(driver);
-            Console.WriteLine("I should be logged in successfully");
-            Assert.IsTrue(isLoggedIn);
+            loginPage.EnterCredentials(driver, username, password);
+            Console.WriteLine("I login with username =" + username + " and with password =" + password);
         }
 
     }
+    
 }
